@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-PROJECT_ROOT = '/workspace/terraform-beginner-bootcamp-2023'
+PROJECT_ROOT = "/workspace/terraform-beginner-bootcamp-2023"
 
 cd /workspace
 
@@ -12,4 +12,4 @@ sudo ./aws/install
 
 aws sts get-caller-identity
 
-cd $PROJECT_ROOT
+cd /workspace/terraform-beginner-bootcamp-2023
