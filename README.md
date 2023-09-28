@@ -34,4 +34,8 @@ terraform destroy
             1.1- gp env TERRAFORM_CLOUD_TOEKN="terra_cloud_token"
             1.2- export TERRAFORM_CLOUD_TOEKN="terra_cloud_token"
             1.3- chmod u+x ./bin/generate_trfc_credentials
-        2- Using a bash script and creds from first step 
+        2- Using a bash script and creds from first step
+    
+    # Set AWS creds in tf cloud
+        1- go to variables
+        2- set key and value (remeber to mark as tf variable and sensitive)
