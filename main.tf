@@ -1,7 +1,37 @@
-resource "aws_s3_bucket" "website_bucket" {
-  bucket = var.bucket_name
+terraform {
+# #   cloud {
+# #     organization = "terraform-bootcamp-2023-updated"
 
-  tags = {
-    UserUuid = var.user_uuid
-  }
+# #     workspaces {
+# #       name = "terra-house-galall-1"
+# #     }
+# #   }
+#   required_providers {
+#     aws = {
+#       source = "hashicorp/aws"
+#       version = "5.17.0"
+#     }
+#   }
+# }
+
+# provider "aws" {
+#   # Configuration options
+# }
+
+# # provider "random" {
+# #   # Configuration options
+# # }
+
+# resource "aws_s3_bucket" "website_bucket" {
+#   bucket = var.bucket_name
+
+#   tags = {
+#     UserUuid = var.user_uuid
+#   }
+}
+
+module "terrahouse_aws" {
+  source = "./modules/aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
 }
