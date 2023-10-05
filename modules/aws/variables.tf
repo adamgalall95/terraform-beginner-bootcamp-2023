@@ -38,3 +38,12 @@ variable "error_html_filepath" {
   }
 }
 
+variable "content_version" {
+  description = "Positive integer starting from 1"
+  type        = number
+
+  validation {
+    condition     = var.content_version >= 1 && floor(var.content_version) == var.content_version
+    error_message = "Invalid content. Please provide a positive integer starting from 1."
+  }
+}
