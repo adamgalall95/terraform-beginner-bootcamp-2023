@@ -1,5 +1,6 @@
 output "bucket_name" {
   value = module.terrahouse_aws.bucket_name
+  sensitive = true
 }
 
 output "s3_web_endpoint" {
