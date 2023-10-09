@@ -1,11 +1,11 @@
 terraform {
-# #   cloud {
-# #     organization = "terraform-bootcamp-2023-updated"
-
-# #     workspaces {
-# #       name = "terra-house-galall-1"
-# #     }
-# #   }
+  cloud {
+    organization = "terraform-bootcamp-2023-updated"
+    workspaces {
+      name = "terraform-cloud"
+    }
+  }
+}
 #   required_providers {
 #     aws = {
 #       source = "hashicorp/aws"
@@ -28,7 +28,6 @@ terraform {
 #   tags = {
 #     UserUuid = var.user_uuid
 #   }
-}
 
 module "terrahouse_aws" {
   source = "./modules/aws"
